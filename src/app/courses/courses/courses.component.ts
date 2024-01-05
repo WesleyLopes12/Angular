@@ -33,10 +33,14 @@ export class CoursesComponent implements OnInit {
   }
 
   onError(errorMsg: string) {
-    this.dialog.open(ErrorDialogComponent, {
+    this.dialog.open(ErrorDialogComponent,  {
       data: errorMsg
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
+
+
 }
