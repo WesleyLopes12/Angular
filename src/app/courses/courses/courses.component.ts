@@ -42,5 +42,9 @@ export class CoursesComponent implements OnInit {
 
   }
 
+  onAdd( ) {
+
+  }
+
 
 }
