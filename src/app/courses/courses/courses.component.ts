@@ -21,8 +21,7 @@ export class CoursesComponent implements OnInit {
     private coursesService: CoursesService,
     public dialog: MatDialog
   ) {
-    // this.courses = [];
-    //this.coursesService = new CoursesService();
+
     this.courses$ = this.coursesService.list()
     .pipe(
       catchError(error => {
@@ -40,10 +39,11 @@ export class CoursesComponent implements OnInit {
 
   ngOnInit(): void {
 
+
   }
 
   onAdd( ) {
-
+    console.log ('onAdd');
   }
 
 
