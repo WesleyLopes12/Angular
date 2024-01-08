@@ -14,7 +14,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CoursesComponent implements OnInit {
   courses$: Observable<Course[]>;
-  displayedColumns = ['name', 'category','actions'];
+  displayedColumns = ['name', 'category', 'actions'];
 
   //coursesService: CoursesService;
 
@@ -22,12 +22,10 @@ export class CoursesComponent implements OnInit {
     private coursesService: CoursesService,
     public dialog: MatDialog,
     private router: Router,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ) {
-
-    this.courses$ = this.coursesService.list()
-    .pipe(
-      catchError(error => {
+    this.courses$ = this.coursesService.list().pipe(
+      catchError((error) => {
         this.onError('Erro ao carregar cursos');
         return of([]);
       })
@@ -35,21 +33,16 @@ export class CoursesComponent implements OnInit {
   }
 
   onError(errorMsg: string) {
-    this.dialog.open(ErrorDialogComponent,  {
-      data: errorMsg
+    this.dialog.open(ErrorDialogComponent, {
+      data: errorMsg,
     });
   }
 
   ngOnInit(): void {
     // document why this method 'ngOnInit' is empty
-
-
   }
 
-  onAdd( ) {
-    this.router.navigate(['courses/new'], {relativeTo: this.route});
-
+  onAdd() {
+    this.router.navigate(['/new'], { relativeTo: this.route });
   }
-
-
 }
