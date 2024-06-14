@@ -1,0 +1,23 @@
+<p>{{nome | uppercase}}</p>
+<p>{{nome | lowercase}}</p>
+<p>{{obj | json}}</p>
+
+<table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Nota1</th>
+        <th>Nota2</th>
+        <th>Media</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let a of alunos">
+        <td>{{a.nome}}</td>
+        <td>{{a.Nota1}}</td>
+        <td>{{a.Nota2}}</td>
+        <td>{{a | media}}</td>
+      </tr>
+    </tbody>
+</table>
