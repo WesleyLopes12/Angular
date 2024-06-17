@@ -12,12 +12,13 @@ export class Componente17Component {
   //Variável nome
   nome:string = 'Wesley';
 
-  //Variável media
+  //Variável de media
   media:number = 0;
 
-  //função para calcular a média
+  //Função para calcular a media
   calculo(n1:number, n2:number){
-    return (n1+n2)/2;
+    return(n1+n2)/2;
   }
+
 
 }

@@ -48,6 +48,9 @@ export class Componente11Component {
        // Função de seleção
        selecionar(indice:number){
 
+        //Atribuir o i indice da pessoa
+        this.indice = indice;
+
       // Atribuir os dados da pessoa no formulário
       this.formulario.setValue({
         nome   : this.vetor[indice].nome,
